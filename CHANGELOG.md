@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.2.0 — Structured dialogue revision prepared
+
+- Put core principles, their reasons and conditional reference routing before the ordered dialogue steps, informed by imozuru's published structure.
+- Add an optional in-conversation map for statements, confirmed preferences, interpretations, open choices, corrections and the next action. Do not create persistent profiles automatically.
+- Make the transition to concrete candidates or a research plan explicit when the relevant conditions are already available.
+- Distinguish verified material, search snippets, unsuccessful searches and unexplored leads in exploration-role outputs.
+- Preserve explicit research consent, correction handling, flexible tone and proposal-led replies. Extend the public package to include the new reference and document the structure in all three README pages.
+
+## 0.1.1 — README revision prepared
+
+- Incorporate the maintainer's revised Japanese introduction, examples and origins, and show usage before the workflow.
+- Put AI-assisted installation first, followed by Codex, Claude Code and OMP, with user-level and project-level locations and host-specific invocation syntax.
+- Align the English and Simplified Chinese pages with the Japanese revision and link the official Codex and Claude Code documentation.
+- Describe improved relevance as an aim, not a measured performance gain. Skill instructions and tone policy are unchanged.
+
 ## 0.1.0 — Initial public preparation
 
 - Package Nehori as a portable `skills/nehori/` directory, without machine-specific paths.

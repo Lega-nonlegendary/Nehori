@@ -1,4 +1,4 @@
-# Nehori(根掘り)
+# Nehori
 
 English | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
 
@@ -8,6 +8,13 @@ English | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
 
 Instead of only asking questions and expecting you to supply the answers, it offers concrete proposals or small examples, then reshapes the next proposal based on your response.
 
+## How is it different from dialogue that just asks questions?
+
+When your desires are vague, it can be difficult to answer even if asked to tell your conditions. Nehori does not assume that you already have the answer; instead, it prepares options that can be compared.
+
+For example, if you want a bag that works for both work and weekends without looking like a formal business bag, Nehori shows two options rather than fixing on a single shape. Reactions such as "this part is close," "neither is right," or "I'd like to combine the two" become clues for what to explore next.
+
+It distinguishes preferences that emerge only after seeing an example from preferences you held beforehand, aiming to make its suggestions more relevant.
 
 ## How to use
 
@@ -26,15 +33,6 @@ I want to think together about the atmosphere of the screen I want to build, whi
 ```
 
 You do not need to answer all questions. "None of these are right," "I only like this part," "I don't know yet," "I want to leave this to you," or "This is enough" can all be communicated as they are.
-
-
-## How is it different from dialogue that just asks questions?
-
-When your desires are vague, it can be difficult to answer even if asked to tell your conditions. Nehori does not assume that you already have the answer; instead, it prepares options that can be compared.
-
-For example, if you want a bag that works for both work and weekends without looking like a formal business bag, Nehori shows two options rather than fixing on a single shape. Reactions such as "this part is close," "neither is right," or "I'd like to combine the two" become clues for what to explore next.
-
-It distinguishes preferences that emerge only after seeing an example from preferences you held beforehand, aiming to make its suggestions more relevant.
 
 ## How Nehori proceeds
 
@@ -152,6 +150,20 @@ To use it only within a specific project, place `skills/nehori/` into that proje
 Place `skills/nehori/` into the directory designated for skills by your environment. Supporting the skill format is distinct from auto-triggering or tool permissions working in the same way. Follow the installation steps specific to your environment.
 
 The core instructions are currently managed in Japanese. Please inform the assistant of your preferred conversation language. Nehori does not fix the conversation language, tone, or persona.
+
+## Skill structure
+
+The main instructions cover principles and reasons, the dialogue flow, approval before external research, and trust boundaries. Supporting references are read only when needed.
+
+| File | Purpose |
+|---|---|
+| [SKILL.md](skills/nehori/SKILL.md) | Shared dialogue steps and decision criteria |
+| [exploration.md](skills/nehori/references/exploration.md) | Inputs, outputs and integration for the two exploration roles |
+| [dialogue-patterns.md](skills/nehori/references/dialogue-patterns.md) | Questioning approaches and sample replies for different kinds of consultation |
+| [conversation-map.md](skills/nehori/references/conversation-map.md) | Distinguishing statements, preferences, interpretations and open choices, then choosing the next step |
+| [research-notes.md](skills/nehori/references/research-notes.md) | Design rationale, origins and limits of adaptation |
+
+The conversation map is an aid within the conversation, not an automatically saved personal profile. When the user wants concrete candidates and there is enough information to distinguish them, Nehori moves to candidates or a research plan rather than continuing to ask questions.
 
 ## What it does not do / Limitations
 

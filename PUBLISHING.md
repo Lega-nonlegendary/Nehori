@@ -2,6 +2,8 @@
 
 This repository is ready for a manual GitHub upload after review. Nothing in the packaging tool creates a remote repository, authenticates to GitHub, commits, pushes, or publishes a release.
 
+For an existing GitHub repository, replace the changed files at their current paths rather than creating a new repository or wrapper folder. For 0.2.0, upload the updated `skills/nehori/` contents, including the new `references/conversation-map.md`, along with `scripts/package.py`, the three README files, `CHANGELOG.md` and `PUBLISHING.md`. Review any edits made on GitHub before replacing them. This revision changes the skill itself, not only its introduction.
+
 ## 1. Review the public contents
 
 - `README.md` is the English landing page; its links open `README.ja.md` and `README.zh-CN.md`.
@@ -19,13 +21,13 @@ Python 3.10 or later is required only for this optional packaging step. Nehori i
 From the repository root:
 
 ```sh
-python scripts/package.py --output ../dist/nehori-v0.1.0.zip
+python scripts/package.py --output ../dist/nehori-v0.2.0.zip
 ```
 
 On Windows, `py -3` can replace `python`. To invoke from another directory, pass the script's path; the repository root is resolved from the script, not the current directory:
 
 ```sh
-python /path/to/nehori/scripts/package.py --output /path/to/releases/nehori-v0.1.0.zip
+python /path/to/nehori/scripts/package.py --output /path/to/releases/nehori-v0.2.0.zip
 ```
 
 The archive destination must be outside the repository and must not already exist. After making a new revision, choose a new archive name or deliberately remove your old generated archive first. The script prints a JSON manifest containing the archive hash and every packaged member hash.
@@ -63,8 +65,14 @@ For updates, edit the appropriate source files, keep the three README pages alig
 
 ## Verification scope of this preparation
 
-The packaging CLI was exercised on Windows with Python 3.13. Rejection checks were exercised with Python 3.14 for missing/private files, broken/escaping links, local paths, token-shaped strings, unsafe destinations and a Windows junction. The documented PowerShell installation commands were run against a temporary profile, followed by native OMP 18.13.3 skill discovery and reading. Project-local installation was also checked without changing the real user profile.
+For the initial 0.1.0 preparation, the packaging CLI was exercised on Windows with Python 3.13. Rejection checks were exercised with Python 3.14 for missing/private files, broken/escaping links, local paths, token-shaped strings, unsafe destinations and a Windows junction. PowerShell installation and native OMP 18.13.3 discovery and reading were checked, as was project-local installation.
 
-All three README pages were rendered in a local Markdown preview and their language links were exercised. English and Simplified Chinese were translated from the Japanese page using Nani, then copyedited and checked for preserved installation commands and links.
+For the 0.1.1 revision, the Windows PowerShell commands for Codex, Claude Code and OMP were executed in separate temporary profiles. All four installed skill files, including references, matched the source, without nested folders. Native OMP skill discovery and reading were checked again without modifying the real user profile. All three revised README pages were rendered in a local Markdown preview and their language links were exercised.
+
+All three initial README pages were rendered in a local Markdown preview and their language links were exercised. The initial English and Simplified Chinese translations used Nani. The 0.1.1 revision was translated and copyedited directly in OMP from the maintainer's revised Japanese draft, without operating the Nani UI. Installation commands and links were checked across languages. Codex and Claude Code locations and invocation syntax are based on their linked official documentation; their actual clients and the AI-assisted installer prompt were not executed.
+
+For 0.2.0, skill frontmatter was validated for the installed body, the portable body and the existing OMP entry. The installed entry/body/new reference were read through native OMP. The documented Windows commands copied all five skill files into isolated Codex, Claude Code and OMP profiles; native OMP also read the new reference from an unrelated working directory. Codex and Claude Code clients were not launched.
+
+The three revised README pages were rendered locally; language links, the new reference link and its relative backlink were opened. Packaging rejected an unregistered new reference before its allowlist update and included it afterward. Current checks also rejected an unexpected private file, an absolute local path, a missing new reference, an escaping Markdown link and an existing output archive. The 0.2.0 text and translations were prepared in OMP. Dialogue scenarios were rehearsed by the authoring assistant within the same conversation, not through independent model runs or a controlled old/new comparison.
 
 Live GitHub rendering, macOS/Linux installation, other hosts, and independent conversational-quality comparisons were not tested. These checks are not a comprehensive security audit or an effectiveness study.

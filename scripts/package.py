@@ -18,6 +18,7 @@ FILES = (
     "skills/nehori/SKILL.md",
     "skills/nehori/references/exploration.md",
     "skills/nehori/references/dialogue-patterns.md",
+    "skills/nehori/references/conversation-map.md",
     "skills/nehori/references/research-notes.md",
 )
 IGNORED_DIRS = {".git", "__pycache__"}
