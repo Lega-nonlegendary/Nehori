@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 — Conversation focus clarification prepared
+
+- Start with the new subject the user wants to discuss. Frame past or current experience as reference material for that subject, rather than replacing it.
+- Connect answers about reference experiences back to the current subject, without treating those answers alone as a change of goal.
+- Respect an explicit move to discussing an existing subject in its own right. Preserve the rest of the dialogue flow, research consent and flexible tone.
+- Add a fictional pet-conversation example and distinguish reference answers from goal changes in the conversation map.
+
 ## 0.2.0 — Structured dialogue revision prepared
 
 - Put core principles, their reasons and conditional reference routing before the ordered dialogue steps, informed by imozuru's published structure.

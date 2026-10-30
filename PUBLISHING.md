@@ -2,7 +2,7 @@
 
 This repository is ready for a manual GitHub upload after review. Nothing in the packaging tool creates a remote repository, authenticates to GitHub, commits, pushes, or publishes a release.
 
-For an existing GitHub repository, replace the changed files at their current paths rather than creating a new repository or wrapper folder. For 0.2.0, upload the updated `skills/nehori/` contents, including the new `references/conversation-map.md`, along with `scripts/package.py`, the three README files, `CHANGELOG.md` and `PUBLISHING.md`. Review any edits made on GitHub before replacing them. This revision changes the skill itself, not only its introduction.
+For an existing GitHub repository, replace files at their current paths rather than creating a new repository or wrapper folder. When updating from 0.2.0 to 0.2.1, the changed files are `skills/nehori/SKILL.md`, `skills/nehori/references/dialogue-patterns.md`, `skills/nehori/references/conversation-map.md`, `CHANGELOG.md` and `PUBLISHING.md`. From an earlier version, use the full updated package contents. Review any edits made on GitHub before replacing them.
 
 ## 1. Review the public contents
 
@@ -21,13 +21,13 @@ Python 3.10 or later is required only for this optional packaging step. Nehori i
 From the repository root:
 
 ```sh
-python scripts/package.py --output ../dist/nehori-v0.2.0.zip
+python scripts/package.py --output ../dist/nehori-v0.2.1.zip
 ```
 
 On Windows, `py -3` can replace `python`. To invoke from another directory, pass the script's path; the repository root is resolved from the script, not the current directory:
 
 ```sh
-python /path/to/nehori/scripts/package.py --output /path/to/releases/nehori-v0.2.0.zip
+python /path/to/nehori/scripts/package.py --output /path/to/releases/nehori-v0.2.1.zip
 ```
 
 The archive destination must be outside the repository and must not already exist. After making a new revision, choose a new archive name or deliberately remove your old generated archive first. The script prints a JSON manifest containing the archive hash and every packaged member hash.
@@ -74,5 +74,7 @@ All three initial README pages were rendered in a local Markdown preview and the
 For 0.2.0, skill frontmatter was validated for the installed body, the portable body and the existing OMP entry. The installed entry/body/new reference were read through native OMP. The documented Windows commands copied all five skill files into isolated Codex, Claude Code and OMP profiles; native OMP also read the new reference from an unrelated working directory. Codex and Claude Code clients were not launched.
 
 The three revised README pages were rendered locally; language links, the new reference link and its relative backlink were opened. Packaging rejected an unregistered new reference before its allowlist update and included it afterward. Current checks also rejected an unexpected private file, an absolute local path, a missing new reference, an escaping Markdown link and an existing output archive. The 0.2.0 text and translations were prepared in OMP. Dialogue scenarios were rehearsed by the authoring assistant within the same conversation, not through independent model runs or a controlled old/new comparison.
+
+For 0.2.1, the installed and portable skill frontmatter were validated and the installed entry, body and changed references were read through native OMP. Parent-authored same-conversation rehearsals covered a new subject, a reference experience, an explicit topic change, a non-pet example and unchanged research-consent handling. These checks clarify the intended behavior; they do not prove which opening question a model will choose in a new conversation. Public dialogue examples are fictional, not copies of the user's conversation.
 
 Live GitHub rendering, macOS/Linux installation, other hosts, and independent conversational-quality comparisons were not tested. These checks are not a comprehensive security audit or an effectiveness study.

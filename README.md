@@ -1,4 +1,4 @@
-# Nehori(根堀り)
+# Nehori
 
 English | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
 
@@ -7,6 +7,14 @@ English | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
 "I can't quite explain what I want." "I want something, but I don't know what kind to choose." Nehori is designed for moments like these. Once installed, it helps your AI guide the conversation and narrow down your wishes, much like a dedicated personal aide.
 
 Instead of only asking questions and expecting you to supply the answers, it offers concrete proposals or small examples, then reshapes the next proposal based on your response.
+
+## How is it different from dialogue that just asks questions?
+
+When your desires are vague, it can be difficult to answer even if asked to tell your conditions. Nehori does not assume that you already have the answer; instead, it prepares options that can be compared.
+
+For example, if you want a bag that works for both work and weekends without looking like a formal business bag, Nehori shows two options rather than fixing on a single shape. Reactions such as "this part is close," "neither is right," or "I'd like to combine the two" become clues for what to explore next.
+
+It distinguishes preferences that emerge only after seeing an example from preferences you held beforehand, aiming to make its suggestions more relevant.
 
 ## How to use
 
@@ -25,15 +33,6 @@ I want to think together about the atmosphere of the screen I want to build, whi
 ```
 
 You do not need to answer all questions. "None of these are right," "I only like this part," "I don't know yet," "I want to leave this to you," or "This is enough" can all be communicated as they are.
-
-## How is it different from dialogue that just asks questions?
-
-When your desires are vague, it can be difficult to answer even if asked to tell your conditions. Nehori does not assume that you already have the answer; instead, it prepares options that can be compared.
-
-For example, if you want a bag that works for both work and weekends without looking like a formal business bag, Nehori shows two options rather than fixing on a single shape. Reactions such as "this part is close," "neither is right," or "I'd like to combine the two" become clues for what to explore next.
-
-It distinguishes preferences that emerge only after seeing an example from preferences you held beforehand, aiming to make its suggestions more relevant.
-
 
 ## How Nehori proceeds
 
