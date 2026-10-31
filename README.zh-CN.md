@@ -1,4 +1,4 @@
-# Nehori
+# Nehori(根堀り)
 
 [English](README.md) | [日本語](README.ja.md) | 简体中文
 
